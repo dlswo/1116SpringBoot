@@ -45,7 +45,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		log.info("----------------------------------");
 		
 		http.formLogin();
-		
 		http.rememberMe().tokenValiditySeconds(60*60*24); //하루 쿠키 지속
 	}
 	
