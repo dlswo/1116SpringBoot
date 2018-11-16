@@ -48,4 +48,18 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter{
 		
 		http.rememberMe().tokenValiditySeconds(60*60*24); //하루 쿠키 지속
 	}
+	
+	   @Override
+	   protected void configure(AuthenticationManagerBuilder auth) throws Exception {
+	      
+	      log.info("-------------------------------1");
+	      log.info("-------------------------------1");
+	      log.info("-------------------------------1");
+	      log.info("-------------------------------1");
+	      log.info("-------------------------------1");
+	      
+	      auth.userDetailsService(UserDetailsService())
+	      .passwordEncoder(passwordEncoder());
+	   }
+	
 }
